@@ -11,44 +11,42 @@
 <body>
     <div id="emergencyButtonContainer">
         <button id="emergencyButton" onclick="handleEmergency()"></button>
-      </div>
+    </div>
     <div class="main-login">
         <div class="left-login">
             <h1>Faça seu Cadastro Aqui.<br>Denúncia Segura</h1>
-           <a href="index.html"> <img src="imagens/iconelogin.png" class="left-loginimg"> </a>
-        </form>
-        <div class="righ-login"></div>
-        
-    <form class="card-login" id="cadastroForm">
-    
+            <a href="index.html">
+                <img src="imagens/iconelogin.png" class="left-loginimg">
+            </a>
+        </div>
+        <div class="right-login"></div>
+        <form class="card-login" id="cadastroForm">
             <h1>CADASTRO</h1>
             <div class="textfield">
-            <input type="text" id="name" placeholder="Nome" required><br><br>
-            <input type="number" id="age" placeholder="Idade" required><br><br>
-        
-                <label for="e-mail"></label>
-                <input type="email" id="email" placeholder="E-mail">
+                <label for="name">Nome</label>
+                <input type="text" id="name" placeholder="Nome" required>
             </div>
             <div class="textfield">
-                <label for="usuario"></label>
-                <input type="text" id="usuario" placeholder="Usuário">
+                <label for="age">Idade</label>
+                <input type="number" id="age" placeholder="Idade" required>
             </div>
             <div class="textfield">
-                <label for="Senha"></label>
-                <input type="password" id="senha" placeholder="Senha">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="E-mail" required>
             </div>
             <div class="textfield">
-                <label for="Senha"></label>
-                <input type="password" id="confirmaSenha" placeholder="Confirme sua senha">
-            </div class="clipe">
-            <button onclick="cadastrarUsuario()" class="btn-login">Cadastrar</button>
-        </div>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Senha" required>
+            </div>
+            <div class="textfield">
+                <label for="confirmaSenha">Confirme a Senha</label>
+                <input type="password" id="confirmaSenha" placeholder="Confirme sua senha" required>
+            </div>
+            <button type="submit" class="btn-login">Cadastrar</button>
+        </form>
     </div>
 
-
     <script src="js/funcEmerButton.js"></script>
-    <script src="js/scriptcadastro.js"></script>
-
     <script>
         document.getElementById('cadastroForm').addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -65,7 +63,7 @@
             }
 
             try {
-                const res = await fetch('http://localhost:3000/usuarios/register', {
+                const res = await fetch('/usuarios/register', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ nome, email, senha, idade })
@@ -84,9 +82,5 @@
             }
         });
     </script>
-        
-    </body>
-    
+</body>
 </html>
-
-
