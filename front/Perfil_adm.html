@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagens/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon/favicon-16x16.png">
+    <link rel="manifest" href="imagens/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="imagens/logo.png" sizes="16x16">
+    <title>Administração - Denúncia Segura</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adminstyle.css">
+    <link rel="stylesheet" href="css/buttonEmer.css">
+    <link rel="stylesheet" href="css/Perfil-Adm.css">
+     <link rel="stylesheet" href="css/artigos.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/logo.png" alt="Logo">
+                </a>
+                <h1>Administração</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="underline-hover-effect"><a href="index.html">Página Inicial</a></li>
+                    <li class="underline-hover-effect"><a href="NossosArtigos.html">Artigos</a></li>
+                    <li class="underline-hover-effect"><a href="Denuncias.html">Denúncias</a></li>
+                    <li class="underline-hover-effect"><a href="Comunidade.html">Comunidade</a></li>
+                    <li class="underline-hover-effect"><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Painel de Administração</h1>
+
+        <div id="adminContent">
+            <h2>Denúncias Recebidas</h2>
+            <table id="denunciaTable">
+                <thead>
+                    <tr>
+                        <th>Tipo de Abuso</th>
+                        <th>Data e Hora</th>
+                        <th>Descrição</th>
+                        <th>Contato</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- As denúncias serão carregadas aqui -->
+                </tbody>
+            </table>
+        </div>
+    
+        
+    </main>
+    <script src="js/scriptdenuncia.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/funcEmerButton.js"></script>
+    <script src="js/perfil_adm.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="Site de denuncia para mulheres/imagens/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Site de denuncia para mulheres/imagens/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Site de denuncia para mulheres/imagens/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/Site de denuncia para mulheres/imagens/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="imagens/logo.png" sizes="16x16">
+    <title>Denúncia Segura</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylecomunidade.css">
+    <link rel="stylesheet" href="css/buttonEmer.css">
+    <link rel="stylesheet" href="css/artigos.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/logo.png" alt="Logo">
+                </a>
+                <h1>Denúncia Segura</h1>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="underline-hover-effect"><a href="index.html">Página Inicial</a></li>
+                    <li class="underline-hover-effect"><a href="NossosArtigos.html">Artigos</a></li>
+                    <li class="underline-hover-effect"><a href="Denuncias.html">Denúncias</a></li>
+                    <li class="underline-hover-effect"><a href="Comunidade.html">Comunidade</a></li>
+                    <li class="underline-hover-effect"><a href="login.html">Login</a></li>
+                </ul>
+                    <button id="emergencyButton" onclick="handleEmergency()"></button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="denuncias"></section>
+            <h2>Artigos úteis</h2>
+            <p>Artigos úteis para informar a comunidade</p>
+            <div class="artigos">
+               <a href="https://www12.senado.leg.br/noticias/materias/2024/08/27/propostas-no-senado-reforcam-combate-a-violencia-domestica-no-brasil"><div class="artigo">
+                    <img src="imagens/Senado.jpeg" alt="Ícone da Denúncia">
+                    <h3>Propostas no Senado reforçam combate à violência doméstica no Brasil</h3>
+                    <p>Apesar de a Lei Maria da Penha (Lei 11.340/2006) estar perto de comemorar duas décadas de existência...
+                    <p>Fonte: Agência Senado</p></a>
+                </div>
+                <a href="https://www.cnj.jus.br/violencia-domestica-proposta-de-nova-lei-deve-ampliar-direitos-e-protecao-das-mulheres/"><div class="artigo">
+                    <img src="imagens/cnj.jpg" alt="Ícone da Denúncia">
+                    <h3>Violência doméstica: proposta de nova lei deve ampliar direitos e proteção das mulheres</h3>
+                    <p>A criação de uma lei geral de proteção que reconheça e responda a todas as formas de violência é fundamental para...</p>
+                    <p>Fonte: Portal CNJ</p></a>
+                </div>
+                <a href="https://www.deviante.com.br/noticias/o-trabalho-a-mulher-e-a-seguranca-alimentar/"><div class="artigo">
+                    <img src="https://i0.wp.com/www.deviante.com.br/wp-content/uploads/2024/04/1.png?resize=300%2C210&ssl=1" alt="Ícone da Denúncia">
+                    <h3>O trabalho, a mulher e a segurança alimentar!</h3>
+                    <p>As mulheres ocupam espaços importantes para a manutenção da nossa sociedade, apesar de serem pouco reconhecidas por isso....</p>
+                    <p>Fonte: Deviante.com</p></a>
+                </div>
+                <a href="https://ibdfam.org.br/noticias/10728/Prote%C3%A7%C3%A3o+imediata+%C3%A0+mulher+que+denuncie+viol%C3%AAncia+traz+%E2%80%98avan%C3%A7o+significativo%E2%80%99%2C+diz+especialista"><div class="artigo">
+                    <img src="imagens/fro.jpg" alt="Ícone da Denúncia">
+                    <h3>Proteção imediata à mulher que denuncie violência traz ‘avanço significativo’, diz especialista</h3>
+                    <p>Marco importante na luta contra a violência de gênero, a Lei 14.550/2023 garante que as mulheres recebam Medida Protetiva de Urgência....</p>
+                    <p>Fonte: IBDFAM</p></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/scriptdenuncia.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/funcEmerButton.js"></script>
+</body>
+</html>

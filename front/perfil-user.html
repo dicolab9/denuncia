@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="shortcut icon" href="imagens/logo.png">
+    <link rel="stylesheet" href="css/Perfil-user.css">
+    <link rel="stylesheet" href="css/styledenuncia.css">
+    <link rel="stylesheet" href="css/buttonEmer.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/logo.png" alt="Logo">
+                </a>
+                <h1>Denúncia Segura</h1>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="underline-hover-effect"><a href="index.html">Página Inicial</a></li>
+                    <li class="underline-hover-effect"><a href="NossosArtigos.html">Artigos</a></li>
+                    <li class="underline-hover-effect"><a href="Denuncias.html">Denúncias</a></li>
+                    <li class="underline-hover-effect"><a href="Comunidade.html">Comunidade</a></li>
+                </ul>
+                <button id="emergencyButton" onclick="handleEmergency()"></button>
+            </nav>
+        </div>
+    </header>
+    <div class="profile-container">
+        <header class="profile-header">
+            <img id="profile-img" src="imagens/img-user.png" alt="Foto de Perfil">
+            <h1 id="user-name">Usuário</h1>
+            <button onclick="editarPerfil()">Editar Perfil</button>
+        </header>
+
+        <section class="contact-info">
+            <h2>Informações de Contato</h2>
+            <ul>
+                <li><strong>Email:</strong> <span id="user-email">xxxx@xxxx.com</span></li>
+                <li><strong>Telefone:</strong> <span id="user-phone">xxxx-xxxx</span></li>
+            </ul>
+        </section>
+
+        <section class="edit-profile" id="editProfileSection" style="display:none;">
+            <h2>Editar Perfil</h2>
+            <form onsubmit="salvarAlteracoes(); return false;">
+                <label for="newName">Novo Nome:</label>
+                <input type="text" id="newName">
+
+                <label for="newPhone">Novo Telefone:</label>
+                <input type="text" id="newPhone">
+
+                <label for="newImg">Nova Imagem de Perfil:</label>
+                <input type="file" id="newImg" accept="image/*">
+
+                <button type="submit">Salvar</button>
+            </form>
+        </section>
+    </div>
+    <section class="dlt-section">
+        <button onclick="dlt()">Deslogar a conta</button>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="js/funcEmerButton.js"></script>
+    <script src="js/perfil-user.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrativo</title>
+    <link rel="stylesheet" href="css/styleloginadm.css">
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Login Administrativo<br>Denúncia Segura</h1>
+            <a href="index.html">
+                <img src="imagens/iconelogin.png" class="left-loginimg">
+            </a>
+        </div>
+        <div class="righ-login"></div>
+        <div class="card-login">
+            <h1>LOGIN</h1>
+            <form id="loginForm"> <!-- Adicionado o ID loginForm -->
+                <div class="textfield">
+                    <label for="usuario"></label>
+                    <input type="text" id="username" placeholder="Usuário"> <!-- Corrigido o ID -->
+                </div>
+            
+                <div class="textfield">
+                    <label for="Senha"></label>
+                    <input type="password" id="password" placeholder="Senha"> <!-- Corrigido o ID -->
+                </div>
+            
+                <button type="submit" class="btn-login">Entrar</button> <!-- Removido o onclick -->
+                <p>Não é administrador ? Cadastre-se <a href="Cadastro.html">aqui</a>.</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin-login.js"></script> 
+</body>
+</html>

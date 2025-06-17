@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="Site de denuncia para mulheres/imagens/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Site de denuncia para mulheres/imagens/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Site de denuncia para mulheres/imagens/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/Site de denuncia para mulheres/imagens/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="imagens/logo.png" sizes="16x16">
+    <title>Denúncia Segura</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylecomunidade.css">
+    <link rel="stylesheet" href="css/buttonEmer.css">
+    <link rel="stylesheet" href="css/artigos.css">
+</head>
+<body class="pagina-atual">
+    
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/logo.png" alt="Logo">
+                </a>
+                <h1>Denúncia Segura</h1>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="underline-hover-effect"><a href="index.html">Página Inicial</a></li>
+                    <li class="underline-hover-effect"><a href="NossosArtigos.html">Artigos</a></li>
+                    <li class="underline-hover-effect"><a href="Denuncias.html">Denúncias</a></li>
+                    <li class="underline-hover-effect"><a href="Comunidade.html">Comunidade</a></li>
+                    <li class="underline-hover-effect"><a href="login.html">Login</a></li>
+                </ul>
+                    <button id="emergencyButton" onclick="handleEmergency()"></button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="feedback-section">
+            <div class="feedback-container">
+                <div class="feedback">
+                    <p id="feedback-text">Patrícia Gomes: "Ferramenta essencial para denúncias."</p>
+                </div>
+            </div>
+
+            <div class="feedback-form-container">
+                <h2 id="feedback-usuario">Deixe seu Feedback</h2>
+                <form id="feedback-form">
+                    <textarea id="feedback-input" placeholder="Escreva seu feedback aqui..." required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="servicos" class="services">
+            <h2>Nossos serviços</h2>
+            <p>Oferecemos suporte emocional, orientação jurídica e encaminhamento para serviços de saúde e assistência social, além da nossa plataforma de denúncias anônimas.</p>
+            <div class="service-cards">
+                <div class="service-card">
+                    <img src="imagens/lupa.png" alt="Comunidade de Apoio">
+                    <h3>Comunidade de Apoio</h3>
+                    <p>Conecte-se com outras mulheres em situações similares, compartilhe experiências e encontre apoio mútuo em um espaço seguro.</p>
+                </div>
+                <div class="service-card">
+                    <img src="imagens/medkit.png" alt="Assistência Emergencial">
+                    <h3>Assistência Emergencial</h3>
+                    <p>Acesse recursos de cuidado emergencial, incluindo orientação sobre como lidar com situações de crise e encaminhamento para serviços de saúde.</p>
+                </div>
+                <div class="service-card">
+                    <img src="imagens/cellphone.png" alt="Denúncia Anônima e Segura" style="width: 42px;">
+                    <h3>Denúncia Anônima e Segura</h3>
+                    <p>Faça denúncias online de forma anônima e segura contra qualquer forma de violência, garantindo sua privacidade e proteção.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <h2>Delegacias para Mulheres por perto📍</h2>
+    <div class="map-div">
+        <iframe class="responsive-iframe"src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d19258998.71279761!2d-44.68370209284434!3d-15.68451507673397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdelegacia%20da%20mulher!5e0!3m2!1spt-BR!2sbr!4v1726622436492!5m2!1spt-BR!2sbr" width="1000" height="300" style="border:0;" allowfullscreen="true" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    <footer class="footer2">
+        <div class="footer-container2">
+            <div class="footer-left2">
+                <div class="logo-container2">
+                    <img src="imagens/logo.png" alt="Logo" class="footer-logo">
+                    <h2>Denúncia Segura</h2>
+                </div>
+                <p>
+                    Com essa plataforma digital dedicada à denúncia de violência contra mulheres, podemos fornecer um ambiente seguro, anônimo e acessível para que as vítimas compartilhem suas experiências, obtenham informações sobre seus direitos, e se conectem a recursos de apoio e assistência.
+                </p>
+                <p>&copy; DenúnciaSegura PTY LTD 2024. Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <h3>Ajuda</h3>
+                <ul>
+                    <li><a href="#centro-de-denuncias">Centro de denúncias</a></li>
+                    <li><a href="#contato-suporte">Contate suporte</a></li>
+                    <li><a href="#instrucoes">Instruções</a></li>
+                    <li><a href="#como-funciona">Como funciona</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/scriptcomunidade.js"></script>
+    <script src="js/funcEmerButton.js"></script>
+</body>
+</html>

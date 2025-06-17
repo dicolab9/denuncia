@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagens/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon/favicon-16x16.png">
+    <link rel="manifest" href="imagens/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="imagens/logo.png" sizes="16x16">
+    <title>Denúncia Segura</title>
+    <link rel="stylesheet" href="css/denuncias.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styledenuncia.css">
+    <link rel="stylesheet" href="css/buttonEmer.css">
+    <link rel="stylesheet" href="css/artigos.css">    
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/logo.png" alt="Logo">
+                </a>
+                <h1>Denúncia Segura</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="underline-hover-effect"><a href="index.html">Página Inicial</a></li>
+                    <li class="underline-hover-effect"><a href="NossosArtigos.html">Artigos</a></li>
+                    <li class="underline-hover-effect"><a href="Denuncias.html">Denúncias</a></li>
+                    <li class="underline-hover-effect"><a href="Comunidade.html">Comunidade</a></li>
+                    <li class="underline-hover-effect"><a href="login.html">Login</a></li>
+                </ul>
+                <div id="emergencyButtonContainer">
+                    <button id="emergencyButton" onclick="handleEmergency()"></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form id="denunciaForm">
+            <label for="tipoAbuso">Qual é o tipo de abuso ou violência?</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="tipoAbuso" value="Fisico" required> Físico
+                </label>
+                <label>
+                    <input type="radio" name="tipoAbuso" value="Emocional" required> Emocional
+                </label>
+                <label>
+                    <input type="radio" name="tipoAbuso" value="Sexual" required> Sexual
+                </label>
+                <label>
+                    <input type="radio" name="tipoAbuso" value="Financeiro" required> Financeiro
+                </label>
+                <label>
+                    <input type="radio" name="tipoAbuso" value="Outro" required> Outro
+                </label>
+            </div>
+        
+            <label for="dataIncidente">Quando ocorreu o incidente?</label>
+            <input type="datetime-local" id="dataIncidente" name="dataIncidente" required>
+        
+            <label for="localIncidente">Onde ocorreu o incidente?</label>
+            <input type="text" id="localIncidente" name="localIncidente" required>
+        
+            <label for="conheceAgressor">Você conhece o agressor?</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="conheceAgressor" value="Sim" required> Sim
+                </label>
+                <label>
+                    <input type="radio" name="conheceAgressor" value="Não" required> Não
+                </label>
+            </div>
+        
+            <label for="especificacaoAgressor">Caso sim, especifique</label>
+            <textarea id="especificacaoAgressor" name="especificacaoAgressor"></textarea>
+        
+            <label for="descricaoIncidente">Descreva o que aconteceu.</label>
+            <textarea id="descricaoIncidente" name="descricaoIncidente" required></textarea>
+        
+            <label for="perigoImediato">Você está em perigo imediato?</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="perigoImediato" value="Sim" required> Sim
+                </label>
+                <label>
+                    <input type="radio" name="perigoImediato" value="Não" required> Não
+                </label>
+            </div>
+        
+            <label for="ajudaBuscada">Você já procurou ajuda de algum serviço ou autoridade?</label>
+            <input type="text" id="ajudaBuscada" name="ajudaBuscada">
+        
+            <label for="contato">Como prefere ser contatada para acompanhamento?</label>
+            <input type="text" id="contato" name="contato" required>
+        
+            <button type="submit">Enviar Denúncia</button>
+        </form>
+    </main>
+    
+    <script src="js/scriptdenuncia.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/scriptcomunidade.js"></script>
+    <script src="js/funcEmerButton.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="shortcut icon" href="imagens/logo.png" sizes="16x16">
+    <link rel="stylesheet" href="css/styleloginadm.css"> <!-- Reutilizando o estilo do login -->
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Cadastre-se<br>Denúncia Segura</h1>
+            <a href="index.html">
+                <img src="imagens/iconelogin.png" class="left-loginimg">
+            </a>
+        </div>
+        <div class="righ-login"></div>
+        <div class="card-login">
+            <h1>Cadastro</h1>
+            <form id="cadastroForm">
+                <div class="textfield">
+                    <label for="nome"></label>
+                    <input type="text" id="nome" placeholder="Nome Completo" required>
+                </div>
+                <div class="textfield">
+                    <label for="email"></label>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                </div>
+                <div class="textfield">
+                    <label for="usuario"></label>
+                    <input type="text" id="usuario" placeholder="Usuário" required>
+            </div>
+            <div class="textfield">
+                <label for="senha"></label>
+                <input type="password" id="senha" placeholder="Senha" required>
+                <button type="button" class="toggle-password" onclick="togglePassword('senha')">👁️</button>
+            </div>
+            <div class="textfield">
+                <label for="confirmaSenha"></label>
+                <input type="password" id="confirmaSenha" placeholder="Confirme sua Senha" required>
+                <button type="button" class="toggle-password" onclick="togglePassword('confirmaSenha')">👁️</button>
+            </div>
+                <button type="submit" class="btn-login">Cadastrar</button>
+                <p>Já tem cadastro? Faça login <a href="login.html">aqui</a>.</p>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+    
+            const usuario = document.getElementById("usuario").value.trim();
+            const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const senha = document.getElementById("senha").value.trim();
+            const confirmaSenha = document.getElementById("confirmaSenha").value.trim();
+    
+            if (senha !== confirmaSenha) {
+                alert("As senhas não coincidem!");
+                return;
+            }
+    
+            // Simula o cadastro (salvando no localStorage para teste)
+            const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+            usuarios.push({ usuario, nome, email, senha });
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    
+            alert("Cadastro realizado com sucesso!");
+            window.location.href = "login.html";
+        });
+
+    function togglePassword(fieldId) {
+        const field = document.getElementById(fieldId);
+        if (field.type === "password") {
+            field.type = "text";
+        } else {
+            field.type = "password";
+        }
+    }
+
+    </script>
+</body>
+</html>
