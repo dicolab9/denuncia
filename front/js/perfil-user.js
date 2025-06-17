@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const res = await fetch('/usuarios/perfil', { // Alterado de http://localhost:3000
+        const res = await fetch('/usuarios/perfil', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -25,13 +25,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 document.getElementById('profile-img').src = data.imagem;
             }
         } else {
-            alert('Erro: ' + data.detalhe);
+            alert(`Erro: ${data.detalhe || 'Falha ao carregar perfil.'}`);
             localStorage.removeItem('token');
             window.location.href = 'login.html';
         }
     } catch (err) {
-        alert('Erro ao conectar com o servidor.');
-        console.error(err);
+        alert('Erro ao conectar com o servidor. Verifique sua conexão.');
+        console.error('Erro na requisição:', err);
         localStorage.removeItem('token');
         window.location.href = 'login.html';
     }
@@ -46,9 +46,15 @@ function editarPerfil() {
 // Função para salvar alterações
 async function salvarAlteracoes() {
     const token = localStorage.getItem('token');
-    const newName = document.getElementById('newName').value;
-    const newPhone = document.getElementById('newPhone').value;
+    const newName = document.getElementById('newName').value.trim();
+    const newPhone = document.getElementById('newPhone').value.trim();
     const newImg = document.getElementById('newImg').files[0];
+
+    // Validação básica
+    if (!newName && !newPhone && !newImg) {
+        alert('Por favor, preencha pelo menos um campo para atualizar.');
+        return;
+    }
 
     try {
         const formData = new FormData();
@@ -56,7 +62,7 @@ async function salvarAlteracoes() {
         if (newPhone) formData.append('telefone', newPhone);
         if (newImg) formData.append('imagem', newImg);
 
-        const res = await fetch('/usuarios/perfil', { // Alterado de http://localhost:3000
+        const res = await fetch('/usuarios/perfil', {
             method: 'PUT',
             headers: { 'Authorization': `Bearer ${token}` },
             body: formData
@@ -67,11 +73,11 @@ async function salvarAlteracoes() {
             alert('Perfil atualizado com sucesso!');
             window.location.reload();
         } else {
-            alert('Erro: ' + data.detalhe);
+            alert(`Erro: ${data.detalhe || 'Falha ao atualizar perfil.'}`);
         }
     } catch (err) {
-        alert('Erro ao conectar com o servidor.');
-        console.error(err);
+        alert('Erro ao conectar com o servidor. Verifique sua conexão.');
+        console.error('Erro na requisição:', err);
     }
 }
 
