@@ -1,0 +1,117 @@
+/* Estilo principal para a página de login */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-login {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.left-login {
+    flex: 1;
+    background-color: #0044cc;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-login h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.left-loginimg {
+    width: 150px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.righ-login {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-login {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-login h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.textfield {
+    margin-bottom: 15px;
+}
+
+.textfield label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.textfield input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #0044cc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #003399;
+}
+
+.card-login p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-login a {
+    color: #0044cc;
+    text-decoration: none;
+}
+
+.card-login a:hover {
+    text-decoration: underline;
+}

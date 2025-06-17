@@ -1,0 +1,51 @@
+#emergencyButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 65px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    background: transparent;
+    background-image: url('https://luiggime1o.github.io/site-denuncia-mulheres/imagens/switch.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#emergencyButton::after {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#emergencyButton:hover {
+    background-color: rgb(34, 34, 34);
+    opacity: 0.8;
+}
+
+
+#emergencyButton:active {
+    box-shadow: 0 1px 1px 1px #000000;
+    bottom: 25px; 
+}
+
+.background-button:has(#emergencyButton:active) + .emergency {
+    display: block;
+    transform: rotate(0deg) scaleY(1);
+    animation: anims 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes anims {
+    0% {
+        transform: rotate(-30deg) scaleY(0.25);
+    }
+    100% {
+        transform: rotate(0deg) scaleY(1);
+    }
+}

@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+#adminContent {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+#adminContent h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table th {
+    background-color: #1e2a38;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+table td {
+    background-color: #fafafa;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #adminContent {
+        padding: 20px;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #adminContent {
+        padding: 15px;
+    }
+
+    table th, table td {
+        font-size: 0.85rem;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+}

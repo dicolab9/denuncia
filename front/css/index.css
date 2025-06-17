@@ -1,0 +1,124 @@
+/* Responsividade para tablets e celulares */
+@media (max-width: 1024px) {
+    .header-container,
+    .hero,
+    .education,
+    .recursos,
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .service-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .education-image img,
+    .recursos-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .hero-image img.big {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+  
+    .logo {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    .footer-left,
+    .footer-right {
+      width: 100%;
+    }
+  
+    .footer-logo {
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-text h2,
+    .services h2,
+    .education-text h2,
+    .recursos-text h2 {
+      font-size: 1.4rem;
+    }
+  
+    .hero-text p,
+    .education-text p,
+    .recursos-text p {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  
+    .logo h1 {
+      font-size: 1.2rem;
+    }
+  
+    #emergencyButton {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  } 
+  /* Em telas maiores, mantém o layout lado a lado com espaçamento */
+  @media (min-width: 769px) {
+    .service-cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+}
+/* Seção geral */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  /* Container dos cards */
+  .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 32px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; /* Garante centralização */
+    box-sizing: border-box;
+  }
+  
+  /* Cada card */
+  .service-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 24px;
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+    flex: 1 1 280px;
+    box-sizing: border-box;
+  }
+  
+  

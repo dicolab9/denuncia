@@ -1,0 +1,243 @@
+body.pagina-atual {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, #7A68C1, #9B8FDA 60%, #D6D1EA 100%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.underline-hover-effect a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.feedback-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto; 
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.feedback-container, .feedback-form-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #F8F7F5;
+    box-sizing: border-box; 
+}
+
+.feedback-container {
+    margin-bottom: 40px;
+}
+
+.feedback-container p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: black;
+}
+
+.feedback-form-container h2 {
+    margin: 0 0 20px;
+    font-size: 1.5em;
+    color: black;
+}
+
+.feedback-form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback-form-container textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px; 
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.feedback-form-container button {
+    padding: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-form-container button:hover {
+    background-color: black;
+}
+
+
+.services{
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px 0;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-card{
+    width: 50%;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+.map-div {
+    border-radius: 10px; 
+    border: 3px solid #e7e0e0;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(129, 127, 127, 0.1);
+    background-color: gray;
+  }
+  .map-div:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(94, 85, 85, 0.2); 
+  }
+  .footer2 {
+    background: linear-gradient(90deg, #B19BDC, #C6C3E8 70%, #E6E6F0 100%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    padding: 1.2em;
+    width: 100%;
+}
+
+.footer-container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-left2, .footer-right2 {
+    flex: 1;
+    margin: 1em;
+}
+
+.footer-left2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left2 h2, .footer-right2 h3 {
+    margin: 0 0 1em 0;
+}
+
+.footer-left2 p, .footer-right2 ul {
+    margin: 0.5em 0;
+}
+
+@media (max-width: 568px) {
+    .footer-container2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left2, .footer-right2 {
+        margin: 1em 0;
+        text-align: center;
+    }
+}

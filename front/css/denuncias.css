@@ -1,0 +1,150 @@
+/* Reset básico para evitar margens/padding indesejados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilizar o header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff; /* Ajuste a cor de fundo conforme necessário */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destacar */
+    z-index: 1000; /* Garante que o header fique acima do conteúdo */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Ajuste conforme necessário */
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Ajuste a cor conforme necessário */
+}
+
+#emergencyButtonContainer {
+    margin-left: 20px;
+}
+
+/* Estilizar o main para começar abaixo do header */
+main {
+    margin-top: 80px; /* Ajuste conforme a altura real do header */
+    padding: 20px;
+    flex: 1;
+}
+
+/* Estilizar o formulário */
+#denunciaForm {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#denunciaForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#denunciaForm input[type="text"],
+#denunciaForm input[type="datetime-local"],
+#denunciaForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#denunciaForm button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#denunciaForm button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #emergencyButtonContainer {
+        margin: 10px 0;
+    }
+
+    main {
+        margin-top: 120px; /* Ajuste para header maior em telas menores */
+    }
+}

@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+main h2 {
+    margin-top: 0;
+}
+
+main p {
+    font-size: 1.2em;
+    color: #666;
+}
+.denuncias {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.denuncias h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.denuncias p {
+    font-size: 1.2em;
+    color: #665;
+    margin-bottom: 2em;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 2em; 
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+}
+
+.service-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1em;
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #665;
+}
+.user-profiles {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.user-profiles h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.user-profiles p {
+    font-size: 1.2em;
+    color: #665;
+    margin-bottom: 2em;
+}
+
+.profile-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.profile-card {
+    background-color: #fff;
+    padding: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 360px;
+    width: 360px;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1em;
+}
+
+.profile-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.profile-card p {
+    font-size: 1em;
+    color: #665;
+}
+
+.actions {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+
+.action-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
