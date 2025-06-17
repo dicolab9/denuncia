@@ -7,7 +7,7 @@ const Usuario = require('../models/usuarioModel');
 // Configuração do multer para upload de imagens
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'uploads/');
+    cb(null, 'Uploads/');
   },
   filename: (req, file, cb) => {
     cb(null, `${Date.now()}-${file.originalname}`);
@@ -113,13 +113,48 @@ class UsuarioController {
       res.status(500).json({ detalhe: error.message });
     }
   }
+
+  static async deleteAccount(req, res) {
+    try {
+      const deleted = await Usuario.deleteById(req.user.id);
+      if (!deleted) {
+        return res.status(404).json({ detalhe: 'Usuário não encontrado' });
+      }
+      res.json({ mensagem: 'Conta deletada com sucesso' });
+    } catch (error) {
+      console.error('Erro ao deletar conta:', error);
+      res.status(500).json({ detalhe: error.message });
+    }
+  }
 }
 
 module.exports = UsuarioController;
 
 // const bcrypt = require('bcrypt');
 // const jwt = require('jsonwebtoken');
+// const multer = require('multer');
+// const path = require('path');
 // const Usuario = require('../models/usuarioModel');
+
+// // Configuração do multer para upload de imagens
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, 'uploads/');
+//   },
+//   filename: (req, file, cb) => {
+//     cb(null, `${Date.now()}-${file.originalname}`);
+//   }
+// });
+// const upload = multer({
+//   storage,
+//   fileFilter: (req, file, cb) => {
+//     const ext = path.extname(file.originalname).toLowerCase();
+//     if (ext !== '.jpg' && ext !== '.jpeg' && ext !== '.png') {
+//       return cb(new Error('Apenas imagens JPG, JPEG ou PNG são permitidas'));
+//     }
+//     cb(null, true);
+//   }
+// });
 
 // class UsuarioController {
 //   static async register(req, res) {
@@ -177,6 +212,37 @@ module.exports = UsuarioController;
 //     } catch (error) {
 //       console.error('Erro no login:', error);
 //       res.status(500).json({ detalhe: 'Erro no servidor' });
+//     }
+//   }
+
+//   static async getProfile(req, res) {
+//     try {
+//       const usuario = await Usuario.findById(req.user.id);
+//       if (!usuario) {
+//         return res.status(404).json({ detalhe: 'Usuário não encontrado' });
+//       }
+//       res.json(usuario);
+//     } catch (error) {
+//       console.error('Erro ao buscar perfil:', error);
+//       res.status(500).json({ detalhe: error.message });
+//     }
+//   }
+
+//   static upload = upload.single('imagem'); // Middleware para upload de imagem
+
+//   static async updateProfile(req, res) {
+//     const { nome, telefone } = req.body;
+//     const imagem = req.file ? `/uploads/${req.file.filename}` : null;
+
+//     try {
+//       const updated = await Usuario.updateProfile(req.user.id, { nome, telefone, imagem });
+//       if (!updated) {
+//         return res.status(404).json({ detalhe: 'Usuário não encontrado' });
+//       }
+//       res.json({ mensagem: 'Perfil atualizado com sucesso' });
+//     } catch (error) {
+//       console.error('Erro ao atualizar perfil:', error);
+//       res.status(500).json({ detalhe: error.message });
 //     }
 //   }
 // }
