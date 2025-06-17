@@ -39,6 +39,10 @@
 
         <section class="contact-info">
             <h2>Informações de Contato</h2>
+            <section class="dlt-section">
+                <button onclick="dlt()">Deslogar</button>
+                <button onclick="deletarConta()" class="delete-account-btn">Deletar Conta</button>
+            </section>
             <ul>
                 <li><strong>Email:</strong> <span id="user-email">xxxx@xxxx.com</span></li>
                 <li><strong>Telefone:</strong> <span id="user-phone">xxxx-xxxx</span></li>
@@ -61,9 +65,7 @@
             </form>
         </section>
     </div>
-    <section class="dlt-section">
-        <button onclick="dlt()">Deslogar a conta</button>
-    </section>
+    
 
     <script src="js/script.js"></script>
     <script src="js/funcEmerButton.js"></script>
