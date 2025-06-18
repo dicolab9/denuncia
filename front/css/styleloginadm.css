@@ -8,6 +8,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(90deg, #FC5C7D, #6A82FB);
+
+}
+
+/* Permite o conteúdo rolar se for maior que a altura da tela */
+@media (max-height: 600px) {
+    body {
+        height: auto;
+        padding: 40px 0;
+    }
 }
 
 .main-login {
@@ -20,21 +30,53 @@ body {
     overflow: hidden;
 }
 
+/* Ajustes para telas pequenas (até 768px) */
+@media (max-width: 768px) {
+    .main-login {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    .left-login,
+    .righ-login {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .left-login h1 {
+        font-size: 20px;
+    }
+
+    .left-loginimg {
+        width: 100px;
+    }
+
+    .card-login {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .card-login h1 {
+        font-size: 20px;
+    }
+}
+
 .left-login {
     flex: 1;
-    background-color: #0044cc;
+    background: linear-gradient(90deg, #FF512F, #DD2476);
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    text-align: center;
 }
 
 .left-login h1 {
     font-size: 24px;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .left-loginimg {
@@ -90,7 +132,8 @@ body {
     padding: 10px;
     font-size: 16px;
     color: white;
-    background-color: #0044cc;
+    background: linear-gradient(90deg, #FF7E79, #F7C8D0);
+
     border: none;
     border-radius: 5px;
     cursor: pointer;

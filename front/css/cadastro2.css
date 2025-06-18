@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+     background: linear-gradient(90deg, #FC5C7D, #6A82FB);
 }
 
 .main-login {
@@ -22,7 +23,7 @@ body {
 
 .left-login {
     flex: 1;
-    background-color: #0044cc;
+    background: linear-gradient(90deg, #FF512F, #DD2476);
     color: white;
     display: flex;
     flex-direction: column;
@@ -91,7 +92,7 @@ body {
     padding: 10px;
     font-size: 16px;
     color: white;
-    background-color: #0044cc;
+    background: linear-gradient(90deg, #FF7E79, #F7C8D0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
